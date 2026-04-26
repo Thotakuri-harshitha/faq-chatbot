@@ -1,13 +1,28 @@
+# import streamlit as st
+# import os
+# import nltk
+
+# # ✅ Fix NLTK for Streamlit Cloud
+# nltk_data_path = "/tmp/nltk_data"
+# os.makedirs(nltk_data_path, exist_ok=True)
+# nltk.data.path.append(nltk_data_path)
+
+# nltk.download('punkt', download_dir=nltk_data_path)
+# nltk.download('stopwords', download_dir=nltk_data_path)
+# nltk.download('wordnet', download_dir=nltk_data_path)
+
 import streamlit as st
 import os
 import nltk
 
-# ✅ Fix NLTK for Streamlit Cloud
+# ✅ FIX for Streamlit Cloud (VERY IMPORTANT)
 nltk_data_path = "/tmp/nltk_data"
 os.makedirs(nltk_data_path, exist_ok=True)
 nltk.data.path.append(nltk_data_path)
 
+# ✅ Download ALL required resources
 nltk.download('punkt', download_dir=nltk_data_path)
+nltk.download('punkt_tab', download_dir=nltk_data_path)   # 🔥 IMPORTANT FIX
 nltk.download('stopwords', download_dir=nltk_data_path)
 nltk.download('wordnet', download_dir=nltk_data_path)
 
